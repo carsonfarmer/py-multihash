@@ -14,7 +14,6 @@ Overview
         | |coveralls| |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
 
 .. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?style=flat
     :target: https://readthedocs.org/projects/py-multihash
@@ -39,10 +38,6 @@ Overview
 .. |version| image:: https://img.shields.io/pypi/v/multihash.svg
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/multihash
-
-.. |commits-since| image:: https://img.shields.io/github/commits-since/carsonfarmer/py-multihash/v0.1.0.svg
-    :alt: Commits since latest release
-    :target: https://github.com/carsonfarmer/py-multihash/compare/v0.1.0...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/multihash.svg
     :alt: PyPI Wheel

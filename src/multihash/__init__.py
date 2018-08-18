@@ -5,8 +5,14 @@
 Multihash implementation in Python.
 """
 
-from typing import Dict, Any, Union, Optional
+from binascii import hexlify
+from typing import Any
+from typing import Dict
+from typing import Optional
+from typing import Union
+
 import base58
+
 from . import constants
 from . import varint
 
@@ -17,7 +23,7 @@ def to_hex_string(multihash: bytes) -> str:
     :param multihash: The input multihash as an array of bytes.
     :return: Output hex string representation of input hash.
     """
-    return multihash.hex()
+    return hexlify(multihash)
 
 
 def from_hex_string(multihash: str) -> bytes:

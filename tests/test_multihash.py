@@ -2,8 +2,11 @@
  Multihash tests.
 """
 
+from binascii import hexlify
+
 import base58
 import pytest
+
 import multihash
 
 
@@ -12,18 +15,18 @@ class TestHexString:
         for case in valid:
             code = case['encoding']['code']
             buf = multihash.encode(bytes.fromhex(case['hex']), code)
-            assert multihash.to_hex_string(buf) == buf.hex()
+            assert multihash.to_hex_string(buf) == hexlify(buf)
 
     def test_invalid_to_hex_string(self):
         # In actual fact, type checking should catch this for us
-        with pytest.raises(AttributeError):
+        with pytest.raises(TypeError):
             multihash.to_hex_string('hello world')
 
     def test_valid_from_hex_string(self, valid):
         for case in valid:
             code = case['encoding']['code']
             buf = multihash.encode(bytes.fromhex(case['hex']), code)
-            assert multihash.from_hex_string(buf.hex()) == buf
+            assert multihash.from_hex_string(hexlify(buf).decode()) == buf
 
 
 class TestBase58String:
@@ -72,6 +75,7 @@ class TestDecode:
         with pytest.raises(TypeError):
             multihash.decode('hello')
 
+
 class TestEncode:
     def test_valid_encode(self, valid):
         for case in valid:
@@ -84,7 +88,7 @@ class TestEncode:
             ]
 
             for result in results:
-                assert result.hex() == buf.hex()
+                assert hexlify(result) == hexlify(buf)
 
     def test_invalid_encode(self):
         # In actual fact, type checking should catch these for us
@@ -167,12 +171,12 @@ class TestPrefix:
     def test_valid_prefix(self):
         mhash = multihash.encode(b'hey', 0x11, 3)
         prefix = multihash.prefix(mhash)
-        assert prefix.hex() == '1103'
+        assert hexlify(prefix).decode() == '1103'
 
     def test_invalid_prefix(self):
-        mhash = b'definitely not valid'
         with pytest.raises(ValueError):
-            multihash.prefix(mhash)
+            multihash.prefix(b'definitely not valid')
+
 
 class TestConstants:
     def test_has_constants(self):
