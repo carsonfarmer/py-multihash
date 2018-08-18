@@ -16,6 +16,7 @@ from typing import Tuple
 def to_varint(number: int) -> bytes:
     """
     Pack `number` into varint bytes.
+
     :param number: Integer value to pack into varint bytes.
     :return: Varint bytes array.
     """
@@ -34,6 +35,7 @@ def to_varint(number: int) -> bytes:
 def from_stream(stream: BytesIO, offset: int = 0) -> Tuple[int, int]:
     """
     Read a varint from `stream`.
+
     :param stream: Input bytes stream.
     :param offset: Offset in bytes from which to begin decoding.
     :return: Tuple containing decoded integer and offset of the first byte after encoded integer in source stream.
@@ -52,6 +54,7 @@ def from_stream(stream: BytesIO, offset: int = 0) -> Tuple[int, int]:
 def from_varint(data: bytes, offset: int = 0) -> Tuple[int, int]:
     """
     Return an integer value obtained by decoding varint data.
+
     :param data: Input varint bytes array.
     :param offset: Offset in bytes from which to begin decoding.
     :return: Tuple containing decoded integer and offset of the first byte after encoded integer in source bytes array.
@@ -67,6 +70,7 @@ def _byte(b: int) -> bytes:
 def _read_one(stream: BytesIO) -> int:
     """
     Read a byte from a file-like object (as an integer)
+
     :param stream: Input bytes stream.
     :return: Decoded integer value
     :raises: EOFError if the stream ends while reading bytes.

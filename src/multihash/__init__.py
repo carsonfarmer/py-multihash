@@ -20,6 +20,7 @@ from . import varint
 def to_hex_string(multihash: bytes) -> str:
     """
     Convert the given multihash to a hex encoded string.
+
     :param multihash: The input multihash as an array of bytes.
     :return: Output hex string representation of input hash.
     """
@@ -29,6 +30,7 @@ def to_hex_string(multihash: bytes) -> str:
 def from_hex_string(multihash: str) -> bytes:
     """
     Convert the given hex encoded string to a multihash.
+
     :param multihash: The input multihash as a hex encoded string.
     :return: Output byte array representation of input hash.
     """
@@ -38,6 +40,7 @@ def from_hex_string(multihash: str) -> bytes:
 def to_b58_string(multihash: bytes) -> str:
     """
     Convert the given multihash to a base58 encoded string.
+
     :param multihash: The input multihash as an array of bytes.
     :return: Output Base58 encoded string representation of input hash.
     """
@@ -49,6 +52,7 @@ def to_b58_string(multihash: bytes) -> str:
 def from_b58_string(multihash: str) -> bytes:
     """
     Convert the given base58 encoded string to a multi-hash.
+
     :param multihash: The input multihash as a Bse58 encoded string.
     :return: Output byte array representation of input hash.
     """
@@ -61,6 +65,7 @@ def from_b58_string(multihash: str) -> bytes:
 def decode(buf: bytes) -> Dict[str, Any]:
     """
     Decode a hash from the given multihash.
+
     :param buf: Input multihash as an array of bytes.
     :return: Dictionary of type {code: int, name: str, length: int, digest: bytes}
     """
@@ -89,6 +94,7 @@ def decode(buf: bytes) -> Dict[str, Any]:
 def encode(digest: bytes, code: Union[str, int], length: Optional[int] = None) -> bytes:
     """
     Encode a hash digest along with the specified function code.
+
     :param digest: Input hash digest as an array of bytes.
     :param code: The hash function code as an int or string.
     :param length: The digest length. Defaults to None, in which case length is derived from the digest itself.
@@ -111,7 +117,9 @@ def encode(digest: bytes, code: Union[str, int], length: Optional[int] = None) -
 def coerce_code(name: Union[str, int]):
     """
     Converts a hash function name into the matching code.
+
     If passed a number it will return the number if it's a valid code.
+
     :param name: The input hash function code.
     :return: Output hash function number/code.
     """
@@ -133,6 +141,7 @@ def coerce_code(name: Union[str, int]):
 def is_app_code(code: int) -> bool:
     """
     Checks whether a code is part of the app range.
+
     :param code: Code to check.
     :return: Boolean indicating whether `code` is within the app range.
     """
@@ -142,6 +151,7 @@ def is_app_code(code: int) -> bool:
 def is_valid_code(code: int) -> bool:
     """
     Checks whether a multihash code is valid.
+
     :param code: Code to check.
     :return: Boolean indicating whether `code` is a valid multihash code.
     """
@@ -158,6 +168,7 @@ def is_valid_code(code: int) -> bool:
 def validate(multihash: bytes) -> bool:
     """
     Check if the given buffer is a valid multihash.
+
     :param multihash: Input multihash bytes array.
     :return: Boolean indicating if input in  a valid multihash.
     """
@@ -171,6 +182,7 @@ def validate(multihash: bytes) -> bool:
 def prefix(multihash: bytes) -> bytes:
     """
     Returns a prefix from a valid multihash. Throws an error if it is not valid.
+
     :param multihash: Input multihash bytes array.
     :return: Bytes array with multihash prefix.
     """
