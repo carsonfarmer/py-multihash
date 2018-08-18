@@ -16,6 +16,8 @@ import base58
 from . import constants
 from . import varint
 
+__version__ = '0.1.0'
+
 
 def to_hex_string(multihash: bytes) -> str:
     """
