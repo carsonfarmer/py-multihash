@@ -35,7 +35,10 @@ Overview
 
 .. end-badges
 
-Multihash implementation in Python
+`Multihash <https://github.com/multiformats/multihash>`_ implementation in Python
+
+Currently a direct port of the official `Node/Javascript version <https://github.com/multiformats/js-multihash>`_
+to Python. As this projects matures, it may become more 'Pythonic'.
 
 
 License

@@ -53,7 +53,7 @@ def from_b58_string(multihash: str) -> bytes:
     """
     Convert the given base58 encoded string to a multi-hash.
 
-    :param multihash: The input multihash as a Bse58 encoded string.
+    :param multihash: The input multihash as a base58 encoded string.
     :return: Output byte array representation of input hash.
     """
     if not isinstance(multihash, str):
