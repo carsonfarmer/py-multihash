@@ -12,8 +12,6 @@ Overview
     * - tests
       - | |travis| |requires|
         | |coveralls| |codecov|
-    * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
 
 .. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?style=flat&version=latest
     :target: https://readthedocs.org/projects/py-multihash
@@ -35,28 +33,15 @@ Overview
     :alt: Coverage Status
     :target: https://codecov.io/github/carsonfarmer/py-multihash
 
-.. |version| image:: https://img.shields.io/pypi/v/multihash.svg
-    :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/multihash
-
-.. |wheel| image:: https://img.shields.io/pypi/wheel/multihash.svg
-    :alt: PyPI Wheel
-    :target: https://pypi.python.org/pypi/multihash
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/multihash.svg
-    :alt: Supported versions
-    :target: https://pypi.python.org/pypi/multihash
-
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/multihash.svg
-    :alt: Supported implementations
-    :target: https://pypi.python.org/pypi/multihash
-
-
 .. end-badges
 
 Multihash implementation in Python
 
-* Free software: MIT license
+
+License
+=======
+
+`MIT Licensed <LICENSE>`_ © 2018 Carson Farmer, 2016 Protocol Labs Inc.
 
 Installation
 ============
