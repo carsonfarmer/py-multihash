@@ -15,7 +15,7 @@ Overview
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
 
-.. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?style=flat
+.. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?style=flat&version=latest
     :target: https://readthedocs.org/projects/py-multihash
     :alt: Documentation Status
 
@@ -63,7 +63,7 @@ Installation
 
 ::
 
-    pip install multihash
+    pip install git+https://github.com/carsonfarmer/py-multihash
 
 Documentation
 =============
