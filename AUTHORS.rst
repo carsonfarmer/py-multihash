@@ -2,4 +2,4 @@
 Authors
 =======
 
-* Carson Farmer - https://textile.io
+* Carson Farmer - <carson@textile.io> (https://www.textile.io/)

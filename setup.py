@@ -50,7 +50,7 @@ setup(
         'Topic :: Utilities',
     ],
     keywords=['ipfs', 'multihash', 'multiformat'],
-    install_requires=['base58'],
+    install_requires=['base58', 'typing'],
     setup_requires=["pytest-runner"],
     test_suite='tests',
     tests_require=['pytest', 'coverage']
