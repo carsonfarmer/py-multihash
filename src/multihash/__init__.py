@@ -26,7 +26,7 @@ def to_hex_string(multihash: bytes) -> str:
     :param multihash: The input multihash as an array of bytes.
     :return: Output hex string representation of input hash.
     """
-    return hexlify(multihash)
+    return hexlify(multihash).decode()
 
 
 def from_hex_string(multihash: str) -> bytes:
@@ -116,7 +116,7 @@ def encode(digest: bytes, code: Union[str, int], length: Optional[int] = None) -
     return varint.to_varint(hash_function) + varint.to_varint(length) + digest
 
 
-def coerce_code(name: Union[str, int]):
+def coerce_code(name: Union[str, int]) -> int:
     """
     Converts a hash function name into the matching code.
 
