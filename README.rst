@@ -13,8 +13,8 @@ Overview
       - | |travis| |requires|
         | |coveralls| |codecov|
 
-.. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?style=flat&version=latest
-    :target: https://readthedocs.org/projects/py-multihash
+.. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?version=latest
+    :target: https://py-multihash.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/carsonfarmer/py-multihash.svg?branch=master
