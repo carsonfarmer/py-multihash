@@ -15,7 +15,7 @@ class TestHexString:
         for case in valid:
             code = case['encoding']['code']
             buf = multihash.encode(bytes.fromhex(case['hex']), code)
-            assert multihash.to_hex_string(buf) == hexlify(buf)
+            assert multihash.to_hex_string(buf) == hexlify(buf).decode()
 
     def test_invalid_to_hex_string(self):
         # In actual fact, type checking should catch this for us
