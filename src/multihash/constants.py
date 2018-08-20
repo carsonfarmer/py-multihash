@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 names = {
+    'md5': 0xd5,
     'sha1': 0x11,
     'sha2-256': 0x12,
     'sha2-512': 0x13,
@@ -341,6 +342,7 @@ names = {
 }
 
 codes = {
+    0xd5: 'md5',
     0x11: 'sha1',
     0x12: 'sha2-256',
     0x13: 'sha2-512',
@@ -682,6 +684,7 @@ codes = {
 }
 
 default_lengths = {
+    0xd5: 16,
     0x11: 20,
     0x12: 32,
     0x13: 64,

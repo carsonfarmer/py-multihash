@@ -37,9 +37,11 @@ Overview
 
 `Multihash <https://github.com/multiformats/multihash>`_ implementation in Python
 
-Currently a direct port of the official `Node/Javascript version <https://github.com/multiformats/js-multihash>`_
-to Python. As this projects matures, it may become more 'Pythonic'.
+Multihash is a protocol for differentiating outputs from various well-established cryptographic hash functions,
+addressing size + encoding considerations.
 
+It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist.
+See `jbenet/random-ideas#1 <https://github.com/jbenet/random-ideas/issues/1>`_ for a longer discussion.
 
 License
 =======
@@ -58,26 +60,17 @@ Documentation
 
 https://py-multihash.readthedocs.io/
 
-Development
-===========
+Contributing
+============
 
-To run the all tests run::
+See our `contribution guidelines <CONTRIBUTING.rst>`_ for a development workflow and details on how to contribute.
 
-    tox
+Notes
+=====
 
-Note, to combine the coverage data from all the tox environments run:
+This package is a direct port of the official `Node/Javascript version <https://github.com/multiformats/js-multihash>`_.
+As this projects matures, it may become more 'Pythonic'.
 
-.. list-table::
-    :widths: 10 90
-    :stub-columns: 1
-
-    - - Windows
-      - ::
-
-            set PYTEST_ADDOPTS=--cov-append
-            tox
-
-    - - Other
-      - ::
-
-            PYTEST_ADDOPTS=--cov-append tox
+**Obsolete and deprecated hash functions are included** in this package. `MD4`, `MD5` and `SHA-1` should no longer be
+used for cryptographic purposes, but since many such hashes already exist they are included in the multihash
+specification and may be implemented in multihash libraries such as this one.
