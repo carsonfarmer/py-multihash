@@ -7,15 +7,9 @@ Overview
 .. list-table::
     :stub-columns: 1
 
-    * - docs
-      - |docs|
     * - tests
       - | |travis| |requires|
         | |coveralls| |codecov|
-
-.. |docs| image:: https://readthedocs.org/projects/py-multihash/badge/?version=latest
-    :target: https://py-multihash.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/carsonfarmer/py-multihash.svg?branch=master
     :alt: Travis-CI Build Status
@@ -43,6 +37,11 @@ addressing size + encoding considerations.
 It is useful to write applications that future-proof their use of hashes, and allow multiple hash functions to coexist.
 See `jbenet/random-ideas#1 <https://github.com/jbenet/random-ideas/issues/1>`_ for a longer discussion.
 
+Notice
+=======
+
+There are other Python implementations of multihash out there, including https://github.com/ivilata/pymultihash, https://github.com/multiformats/py-multihash, and at one point, https://github.com/tehmaze/python-multihash. These versions will likely be similar, with minor differences. Currently, it looks like https://github.com/ivilata/pymultihash is the one to use (see https://github.com/libp2p/py-libp2p).
+
 License
 =======
 
@@ -55,15 +54,10 @@ Installation
 
     pip install git+https://github.com/carsonfarmer/py-multihash
 
-Documentation
-=============
-
-https://py-multihash.readthedocs.io/
-
 Contributing
 ============
 
-See our `contribution guidelines <CONTRIBUTING.rst>`_ for a development workflow and details on how to contribute.
+This package is no longer maintained. If you'd like to contribute, see one of the options above, or fork this one!
 
 Notes
 =====
